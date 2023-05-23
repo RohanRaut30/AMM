@@ -15,6 +15,7 @@ import com.example.amm.R;
  * Use the {@link ContactUsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+//test
 public class ContactUsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -24,8 +25,7 @@ public class ContactUsFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String mParam1;
-    private String mParam2;
-
+    private String mParam2
     public ContactUsFragment() {
         // Required empty public constructor
     }
