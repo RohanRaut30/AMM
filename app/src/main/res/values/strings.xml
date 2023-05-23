@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AMM</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="History">History</string>
+    <string name="Contact">Contact</string>
+    <string name="Marathi">Marathi</string>
+    <string name="Hindi">Hindi</string>
+    <string name="homepagefirst">Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival. Celebrating its 129th year, the mandal is witness to freedom struggle and progressive reforms associated with the city.</string>
+    <string name="homepagetwo">Mandai, the vegetable market in the old city that has a rich history spanning over 125 years of history, was dominated by a few families, who initiated public celebrations of Ganesh festival and formed the Akhil Mandai Mandal.</string>
+</resources>

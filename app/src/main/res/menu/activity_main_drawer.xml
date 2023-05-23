@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_vector"
+            android:title="@string/menu_home"
+            android:menuCategory="secondary"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery"
+            android:menuCategory="secondary"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/history_vector"
+            android:title="History"
+            android:menuCategory="secondary"/>
+        <item
+            android:id="@+id/contactUsFragment"
+            android:icon="@drawable/contactus_vector"
+            android:title="Contact Us"
+            android:menuCategory="secondary"/>
+    </group>
+
+
+    <item android:title="Language"
+        android:menuCategory="secondary">
+        <menu>
+            <item android:id="@+id/marathiFragment"
+                  android:icon="@drawable/marathi"
+                  android:title="मराठी"/>
+            <item android:id="@+id/hindiFragment"
+                  android:icon="@drawable/hindi"
+                  android:title="हिन्दी"/>
+        </menu>
+    </item>
+
+    <item android:title="Social Services"
+        android:menuCategory="secondary">
+        <menu>
+            <item android:id="@+id/donation"
+                  android:icon="@drawable/dnremovebg"
+                  android:title="Donation" />
+            <item android:id="@+id/socialmedia"
+                  android:icon="@drawable/media_vector"
+                  android:title="Visit Social Media"/>
+        </menu>
+
+    </item>
+
+
+</menu>
