@@ -17,37 +17,28 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/history_vector"
-            android:title="History"
+            android:title="@string/history"
             android:menuCategory="secondary"/>
         <item
             android:id="@+id/contactUsFragment"
             android:icon="@drawable/contactus_vector"
-            android:title="Contact Us"
+            android:title="@string/Contact"
             android:menuCategory="secondary"/>
     </group>
 
 
-    <item android:title="Language"
-        android:menuCategory="secondary">
-        <menu>
-            <item android:id="@+id/marathiFragment"
-                  android:icon="@drawable/marathi"
-                  android:title="मराठी"/>
-            <item android:id="@+id/hindiFragment"
-                  android:icon="@drawable/hindi"
-                  android:title="हिन्दी"/>
-        </menu>
-    </item>
+    <item android:title="@string/select_language"
+        android:menuCategory="secondary"/>
 
-    <item android:title="Social Services"
+    <item android:title="@string/social_services"
         android:menuCategory="secondary">
         <menu>
             <item android:id="@+id/donation"
                   android:icon="@drawable/dnremovebg"
-                  android:title="Donation" />
+                  android:title="@string/donation" />
             <item android:id="@+id/socialmedia"
                   android:icon="@drawable/media_vector"
-                  android:title="Visit Social Media"/>
+                  android:title="@string/visit_social_media"/>
         </menu>
 
     </item>

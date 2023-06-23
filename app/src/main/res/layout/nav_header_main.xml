@@ -27,7 +27,7 @@
         android:layout_marginTop="-15dp"
         android:fontFamily="@font/amatica_sc_bold"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Akhil Mandai Mandal"
+        android:text="@string/akhil_mandai_mandal"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="24sp" />
 

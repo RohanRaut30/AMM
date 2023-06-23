@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "556133063793",
+    "project_id": "akhil-mandai",
+    "storage_bucket": "akhil-mandai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556133063793:android:08c2bfc027a4a814df0fd0",
+        "android_client_info": {
+          "package_name": "com.example.amm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556133063793-1gq27s5f15nalistf3ee37b43raa77fe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp9gCo2jF7-H-7ElIhpSMUjsBcwSqVf5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556133063793-1gq27s5f15nalistf3ee37b43raa77fe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

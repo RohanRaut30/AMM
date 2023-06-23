@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">AMM</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="app_name">Akhil Mandai Mandal</string>
+
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
@@ -19,4 +19,24 @@
     <string name="Hindi">Hindi</string>
     <string name="homepagefirst">Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival. Celebrating its 129th year, the mandal is witness to freedom struggle and progressive reforms associated with the city.</string>
     <string name="homepagetwo">Mandai, the vegetable market in the old city that has a rich history spanning over 125 years of history, was dominated by a few families, who initiated public celebrations of Ganesh festival and formed the Akhil Mandai Mandal.</string>
+    <string name="change_language">Change Language</string>
+    <string name="akhil_mandai_mandal">Akhil Mandai Mandal</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="full_name">Full Name *</string>
+    <string name="email">Email *</string>
+    <string name="mobile">Mobile *</string>
+    <string name="comment">Comment *</string>
+    <string name="submit">Submit</string>
+    <string name="all_rights_reserved_akhilmandaimandal_2022">All rights reserved @AkhilMandaiMandal 2022</string>
+    <string name="we_are_eco_friendly">We are Eco Friendly</string>
+    <string name="akhil_mandai_mandal_and_its_sharada_ganesh_idol_is_one_of_the_main_attractions_of_pune_s_ganesh_festival_sharda_gajanan_idol_is_made_from_eco_friendly_material">Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival, Sharda Gajanan Idol is made from eco friendly material.</string>
+    <string name="student_adoption">Student Adoption</string>
+    <string name="every_year_on_the_occasion_of_dahi_handi_utsav_gokulashtami_we_adopt_student_s_for_their_better_educational_future_under_bal_kamgar_dattak_yojana_which_is_run_by_our_mandal">Every year on the occasion of Dahi Handi Utsav (Gokulashtami) we adopt student\'s for their better educational future under bal kamgar dattak yojana which is run by our Mandal.</string>
+    <string name="fight_against_covid_19">Fight Against Covid-19</string>
+    <string name="in_this_covid_pandemic_situation_our_mandal_organised_various_programs_to_help_the_less_fortunates_get_out_these_tough_times">In this Covid pandemic situation our Mandal organised various programs to help the less fortunates get out these tough times.</string>
+    <string name="select_language">Select Language</string>
+    <string name="social_services">Social Services</string>
+    <string name="visit_social_media">Visit Social Media</string>
+    <string name="donation">Donation</string>
+    <string name="history">History</string>
 </resources>

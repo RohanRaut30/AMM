@@ -66,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/amatica_sc_bold"
                         android:gravity="center"
-                        android:text="We are Eco Friendly"
+                        android:text="@string/we_are_eco_friendly"
                         android:textColor="#C2185B"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -87,7 +87,7 @@
                         android:padding="2dp"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
-                        android:text="Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival, Sharda Gajanan Idol is made from eco friendly material."
+                        android:text="@string/akhil_mandai_mandal_and_its_sharada_ganesh_idol_is_one_of_the_main_attractions_of_pune_s_ganesh_festival_sharda_gajanan_idol_is_made_from_eco_friendly_material"
                         android:textSize="18sp" />
 
 
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/amatica_sc_bold"
                         android:gravity="center"
-                        android:text="Student Adoption"
+                        android:text="@string/student_adoption"
                         android:textColor="#C2185B"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -132,7 +132,7 @@
                         android:padding="2dp"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
-                        android:text="Every year on the occasion of Dahi Handi Utsav (Gokulashtami) we adopt student's for their better educational future under bal kamgar dattak yojana which is run by our Mandal."
+                        android:text="@string/every_year_on_the_occasion_of_dahi_handi_utsav_gokulashtami_we_adopt_student_s_for_their_better_educational_future_under_bal_kamgar_dattak_yojana_which_is_run_by_our_mandal"
                         android:textSize="18sp" />
 
 
@@ -160,7 +160,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/amatica_sc_bold"
                         android:gravity="center"
-                        android:text="Fight Against Covid-19"
+                        android:text="@string/fight_against_covid_19"
                         android:textColor="#C2185B"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -175,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center_horizontal"
-                        android:text="In this Covid pandemic situation our Mandal organised various programs to help the less fortunates get out these tough times."
+                        android:text="@string/in_this_covid_pandemic_situation_our_mandal_organised_various_programs_to_help_the_less_fortunates_get_out_these_tough_times"
                         android:textSize="18sp" />
 
 
@@ -190,21 +190,7 @@
 
 
 
-
-
-
-
-
     </LinearLayout>
-
-
-
-
-
-
-
-
-
 
 
 

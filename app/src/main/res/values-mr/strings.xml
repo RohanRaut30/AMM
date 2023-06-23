@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अखिल मंडई मंडळ</string>
+    <string name="navigation_drawer_close">नेव्हिगेशन ड्रॉवर बंद करा</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">नेव्हिगेशन हेडर</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="menu_home">घर</string>
+    <string name="menu_gallery">गॅलरी</string>
+    <string name="menu_slideshow">स्लाइड शो</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="History">इतिहास</string>
+    <string name="Contact">संपर्क</string>
+    <string name="Marathi">मराठी</string>
+    <string name="Hindi">हिंदी</string>
+    <string name="homepagefirst">अखिल मंडई मंडळ आणि त्याची शारदा-गणेशमूर्ती हे पुण्याच्या गणेश उत्सवाचे मुख्य आकर्षण आहे. आपले १२९ वे वर्ष साजरे करणारे हे मंडळ शहराशी निगडित स्वातंत्र्य संग्राम आणि पुरोगामी सुधारणांचे साक्षीदार आहे.</string>
+    <string name="homepagetwo">सव्वाशे वर्षांचा समृद्ध इतिहास असलेल्या जुन्या शहरातील मंडई या भाजी मंडईवर काही कुटुंबांचे वर्चस्व होते आणि त्यांनी गणेश उत्सवाचा सार्वजनिक उत्सव सुरू केला आणि अखिल मंडई मंडळाची स्थापना केली.</string>
+    <string name="change_language">भाषा बदला</string>
+    <string name="akhil_mandai_mandal">अखिल मंडई मंडळ</string>
+    <string name="contact_us">आमच्याशी संपर्क साधा</string>
+    <string name="full_name">पूर्ण नाव *</string>
+    <string name="email">ईमेल*</string>
+    <string name="mobile">मोबाइल*</string>
+    <string name="comment">टिप्पणी*</string>
+    <string name="submit">प्रस्तुत करा</string>
+    <string name="all_rights_reserved_akhilmandaimandal_2022">२०२२ @AkhilMandaiMandal सर्व हक्क राखीव</string>
+    <string name="we_are_eco_friendly">आम्ही पर्यावरणास अनुकूल आहोत</string>
+    <string name="akhil_mandai_mandal_and_its_sharada_ganesh_idol_is_one_of_the_main_attractions_of_pune_s_ganesh_festival_sharda_gajanan_idol_is_made_from_eco_friendly_material">अखिल मंडई मंडळ आणि त्याची शारदा-गणेश मूर्ती हे पुण्याच्या गणेश उत्सवाचे एक वैशिष्ट्य आहे, शारदा गजाननाची मूर्ती इको-फ्रेंडली सामग्रीपासून बनविली गेली आहे.</string>
+    <string name="student_adoption">विद्यार्थ्याला दत्तक घेणे</string>
+    <string name="every_year_on_the_occasion_of_dahi_handi_utsav_gokulashtami_we_adopt_student_s_for_their_better_educational_future_under_bal_kamgar_dattak_yojana_which_is_run_by_our_mandal">दरवर्षी दहीहंडी उत्सवाच्या (गोकुळाष्टमी) निमित्ताने आमच्या मंडळातर्फे चालविण्यात येणाऱ्या बाल कामगार दत्तक योजनेअंतर्गत विद्यार्थ्यांच्या चांगल्या शैक्षणिक भवितव्यासाठी दत्तक घेतले जाते.</string>
+    <string name="fight_against_covid_19">कोविड-19 के खिलाफ लड़ाई</string>
+    <string name="in_this_covid_pandemic_situation_our_mandal_organised_various_programs_to_help_the_less_fortunates_get_out_these_tough_times">या कोविड महामारीच्या परिस्थितीत, आमच्या मंडळाने कमी भाग्यवानांना या कठीण काळातून बाहेर काढण्यासाठी विविध कार्यक्रमांचे आयोजन केले.</string>
+    <string name="select_language">भाषा निवडा</string>
+    <string name="social_services">सामाजिक सेवा</string>
+    <string name="visit_social_media">सोशल मीडियाला भेट द्या</string>
+    <string name="donation">दान</string>
+    <string name="history">इतिहास</string>
+</resources>

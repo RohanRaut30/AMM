@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अखिल मंडई मंडल</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रॉअर बंद करें</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">नेविगेशन हेडर</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="menu_home">घर</string>
+    <string name="menu_gallery">गैलरी</string>
+    <string name="menu_slideshow">स्लाइड शो</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="History">इतिहास</string>
+    <string name="Contact">संपर्क</string>
+    <string name="Marathi">मराठी</string>
+    <string name="Hindi">हिंदी</string>
+    <string name="homepagefirst">अखिल मंडई मंडल और इसकी शारदा-गणेश मूर्ति पुणे के गणेश उत्सव के मुख्य आकर्षणों में से एक है। अपने 129 वें वर्ष का जश्न मनाते हुए, मंडल स्वतंत्रता संग्राम और शहर से जुड़े प्रगतिशील सुधारों का गवाह है।</string>
+    <string name="homepagetwo">पुराने शहर की सब्जी मंडी मंडई, जिसका 125 वर्षों से अधिक का समृद्ध इतिहास है, में कुछ परिवारों का वर्चस्व था, जिन्होंने गणेश उत्सव के सार्वजनिक समारोहों की शुरुआत की और अखिल मंडई मंडल का गठन किया।</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="akhil_mandai_mandal">अखिल मंडई मंडल</string>
+    <string name="contact_us">हमसे संपर्क करें</string>
+    <string name="full_name">पूरा नाम *</string>
+    <string name="email">ईमेल*</string>
+    <string name="mobile">मोबाइल*</string>
+    <string name="comment">टिप्पणी*</string>
+    <string name="submit">जमा करें</string>
+    <string name="all_rights_reserved_akhilmandaimandal_2022">2022 @AkhilMandaiMandal सभी अधिकार सुरक्षित</string>
+    <string name="we_are_eco_friendly">हम पर्यावरण के अनुकूल हैं</string>
+    <string name="akhil_mandai_mandal_and_its_sharada_ganesh_idol_is_one_of_the_main_attractions_of_pune_s_ganesh_festival_sharda_gajanan_idol_is_made_from_eco_friendly_material">अखिल मंडई मंडल और इसकी शारदा-गणेश मूर्ति पुणे के गणेश उत्सव के मुख्य आकर्षणों में से एक है, शारदा गजानन मूर्ति पर्यावरण के अनुकूल सामग्री से बनाई गई है।</string>
+    <string name="student_adoption">छात्र गोद लेना</string>
+    <string name="every_year_on_the_occasion_of_dahi_handi_utsav_gokulashtami_we_adopt_student_s_for_their_better_educational_future_under_bal_kamgar_dattak_yojana_which_is_run_by_our_mandal">हर साल दही हांडी उत्सव (गोकुलाष्टमी) के अवसर पर हम बाल कामगार दत्तक योजना के तहत छात्रों को उनके बेहतर शैक्षिक भविष्य के लिए गोद लेते हैं जो हमारे मंडल द्वारा चलाया जाता है।</string>
+    <string name="fight_against_covid_19">कोविड-19 के खिलाफ लड़ाई</string>
+    <string name="in_this_covid_pandemic_situation_our_mandal_organised_various_programs_to_help_the_less_fortunates_get_out_these_tough_times">इस कोविड महामारी की स्थिति में हमारे मंडल ने कम भाग्यशाली लोगों को इन कठिन समय से बाहर निकलने में मदद करने के लिए विभिन्न कार्यक्रमों का आयोजन किया।</string>
+    <string name="select_language">भाषा का चयन करें</string>
+    <string name="social_services">सामाजिक सेवाएं</string>
+    <string name="visit_social_media">सोशल मीडिया पर जाएं</string>
+    <string name="donation">दान</string>
+    <string name="history">इतिहास</string>
+</resources>
