@@ -32,7 +32,7 @@ public class Fragment1894 extends Fragment {
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        TextView omkar = root.findViewById(R.id.firsttext);
+
 
         return inflater.inflate(R.layout.fragment_1894, container, false);
 
