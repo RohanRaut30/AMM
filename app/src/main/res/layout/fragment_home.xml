@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/Container"
+
     tools:context=".ui.home.HomeFragment"
     >
 
@@ -19,32 +21,61 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="20dp">
 
-            <ImageView
+            <TextView
+                android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/mainbread"
-                android:layout_marginTop="-115dp"/>
+                android:text="|| एकी हेच बळ ||"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-300dp"
+                android:layout_marginTop="-90dp"
                 android:src="@drawable/baggremove"/>
 
             <TextView
+                android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-90dp"
                 android:fontFamily="@font/candal"
                 android:text="Akhil Mandai Mandal"
                 android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival. Celebrating its 129th year, the mandal is witness to freedom struggle and progressive reforms associated with the city."
+                android:textColor="@color/material_dynamic_neutral_variant30"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Mandai, the vegetable market in the old city that has a rich history spanning over 125 years of history, was dominated by a few families, who initiated public celebrations of Ganesh festival and formed the Akhil Mandai Mandal."
+                android:textColor="@color/material_dynamic_neutral30"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnhome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Read More" />
 
 
             <androidx.cardview.widget.CardView

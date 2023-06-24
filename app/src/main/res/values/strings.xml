@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Akhil Mandai Mandal</string>
 
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="action_profiles">Profile</string>
+    <string name="action_profiles" tools:ignore="MissingTranslation">Profile</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -39,4 +39,13 @@
     <string name="visit_social_media">Visit Social Media</string>
     <string name="donation">Donation</string>
     <string name="history">History</string>
+    <string name="histoname1" translatable="false">1894</string>
+    <string name="histoname2" translatable="false">1953</string>
+    <string name="histoname3" translatable="false">1954</string>
+    <string name="histoname4" translatable="false">2017</string>
+
+    <string name="histotext1" tools:ignore="MissingTranslation">Kaka Laxmanrao Dongre Kachi (wrestler) was a devoted follower of Tuljapur Bhavani Mata. They did not have any children. They made a vow to Tuljabhavani Mata that if they were blessed with a child, they would create a replica of the idol of Sharada Gajanan, which is located at your Kalsar, and celebrate a festival. They started the tradition of the public Ganesh festival in 1894 with a paper flag, cow, goats, sheep, and water from seven rivers. As this idol is quite large, they donated it to the present Akhil Mandai Mandal (Chhatrapati Shivaji Sangh).</string>
+    <string name="histotext2" translatable="false">In the year 1953, all the merchants associated with the Chhatrapati Shivaji Association came together and registered themselves under the Akhil Mandai Mandali Trust for religious purposes. The registration number obtained was A-377. Initially, the idol was placed in the shrine of Shri Deva, and later, it was shifted to a renowned temple by Mr. Gajanan Hari Date. Subsequently, Mr. Bahirat and Mr. Mate rented a plot in the Mahatma Phule Mandai area to establish two shops for the Gaale Mandali.</string>
+    <string name="histotext3" translatable="false">In 1954, in Mandai, a new statue was created by K. Narvekar, dedicated to the laborers, traders, and workers\' union. The intention was to replace the statue every year, but due to the installation of the new statue, the old one got damaged, and the pavilion caught fire. This incident made everyone realize the significance of preserving the tradition of the original statue of Lord Ganesh, and hence, the tradition is now strictly followed without any alterations.</string>
+    <string name="histotext4" translatable="false">On September 14, 2018, the Akhil Mandai Mandal completed 125 years. 125 signifies the completion of a centennial festival year for the Akhil Mandai Mandal\'s Sharada Ganapati celebration, which was grand, majestic, and filled with royal splendor. The immersion procession of Sharada Ganapati was carried out with great enthusiasm and the idol of Sharada Ganapati was brought to provide a glimpse to the devotees. The immersion procession and display became a major attraction for the people of Pune.</string>
 </resources>

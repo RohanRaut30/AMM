@@ -14,22 +14,28 @@ public class myViewAdapter extends FragmentStateAdapter {
         super(fragmentActivity);
     }
 
+
+
     @NonNull
     @Override
     public Fragment createFragment(int position) {
+        Fragment fragment = null;
         switch (position){
             case 0:
-                return new Fragment1894();
+                fragment= new Fragment1894();
+                break;
             case 1:
-                return new Fragment1953();
+                fragment= new Fragment1953();
+                break;
             case 2:
-                return new Fragment1954();
+                fragment= new Fragment1954();
+                break;
             case 3:
-                return new Fragment2017();
-            default:
-                return new Fragment1894();
+                fragment= new Fragment2017();
+                break;
 
         }
+        return fragment;
 
     }
 
