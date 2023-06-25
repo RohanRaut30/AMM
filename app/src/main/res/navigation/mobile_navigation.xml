@@ -42,10 +42,12 @@
         android:label="@string/Hindi"
         tools:layout="@layout/fragment_hindi" />
 
-
     <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.example.amm.ui.home.aboutUsFragment"
-        android:label="About Us" />
+        android:label="AboutUs" />
+
+
+
 
 </navigation>
