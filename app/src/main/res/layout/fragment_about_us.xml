@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.aboutUsFragment"
-    android:padding="18dp">
+    android:padding="18dp"
+    android:paddingBottom="15dp">
 
 
     <LinearLayout
@@ -26,8 +27,55 @@
         android:id="@+id/horizontalLine"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#000000" />
+        android:background="#673AB7" />
 
+        <TextView
+            android:id="@+id/about1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/aboutustext1"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/about2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/aboutsustext2"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/about3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/aboutustext3"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/about4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/aboutustext4"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/about5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/aboutustext5"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
 
 
 

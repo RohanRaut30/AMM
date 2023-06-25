@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 
 
@@ -48,6 +50,7 @@ public class HomeFragment extends Fragment {
     private String textToAnimate = "Akhil Mandai Mandal";
     private int index = 0;
     private NavController navController;
+    private CardView cardStudent;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -55,16 +58,23 @@ public class HomeFragment extends Fragment {
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
-
-
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-
-
-
 
         textView = root.findViewById(R.id.text2);
 
         textView();
+
+        //for Student adoptation card view
+        cardStudent = root.findViewById(R.id.cardStudent);
+        cardStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Navigate to the Student Adoptation
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_mainFragment_to_studentAdaptation);
+
+            }
+        });
 
         Button btn = root.findViewById(R.id.btnhome1);
 

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.StudentAdopFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/adp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/candal"
+            android:text="Student Adaptation"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/student_secound" />
+
+        <TextView
+            android:id="@+id/studentadap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap1"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnForm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Apply For adaptation" />
+
+
+        <TextView
+            android:id="@+id/studentadap2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Our Objective"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/studentadap3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap2"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/studentadap4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Empowering Students"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/studentadap5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap3"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/studentadap6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Financial Assistance"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/studentadap7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap4"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/studentadap8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Mentorship and Guidance"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/studentadap9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap5"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/studentadap10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Educational Resources"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/studentadap11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap6"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/horizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="#673AB7" />
+
+
+        <TextView
+            android:id="@+id/studentadap12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/studentadap7"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

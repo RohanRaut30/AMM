@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_aboutUsFragment"
             app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_studentAdaptation"
+            app:destination="@id/studentAdaptation" />
     </fragment>
 
     <fragment
@@ -45,7 +48,24 @@
     <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.example.amm.ui.home.aboutUsFragment"
-        android:label="AboutUs" />
+        android:label="@string/About" />
+
+    <fragment
+        android:id="@+id/studentAdaptation"
+        android:name="com.example.amm.ui.home.StudentAdopFragment"
+        android:label="@string/StudentAdop">
+
+        <action
+            android:id="@+id/action_mainFragment_to_StudentForm"
+            app:destination="@id/studentAdaptationForm" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentAdaptationForm"
+        android:name="com.example.amm.Fragment.StudentForm"
+        android:label="@string/form" />
+
+
 
 
 
