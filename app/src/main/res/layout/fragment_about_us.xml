@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.aboutUsFragment">
+    tools:context=".ui.home.aboutUsFragment"
+    android:id="@+id/action_homeFragment_to_anotherFragment"
+    android:padding="18dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="this is about us fragment" />
+        android:orientation="vertical"
+        >
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/animatedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/candal"
+        android:text="About Mandal"
+        android:textSize="40dp" />
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
