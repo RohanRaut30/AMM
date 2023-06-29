@@ -19,29 +19,46 @@
             android:icon="@drawable/history_vector"
             android:title="@string/history"
             android:menuCategory="secondary"/>
-        <item
-            android:id="@+id/contactUsFragment"
-            android:icon="@drawable/contactus_vector"
-            android:title="@string/Contact"
-            android:menuCategory="secondary"/>
+
+
+
+
     </group>
 
-
-    <item android:title="@string/select_language"
-        android:menuCategory="secondary"/>
-
-    <item android:title="@string/social_services"
+    <item android:title="Community"
         android:menuCategory="secondary">
         <menu>
-            <item android:id="@+id/donation"
-                  android:icon="@drawable/dnremovebg"
-                  android:title="@string/donation" />
-            <item android:id="@+id/socialmedia"
-                  android:icon="@drawable/media_vector"
-                  android:title="@string/visit_social_media"/>
+            <item
+                android:id="@+id/contactUs"
+                android:icon="@drawable/contactus_vector"
+                android:title="@string/contact_us"
+                android:menuCategory="secondary"/>
+
+            <item
+                android:id="@+id/aboutUsFragment"
+                android:icon="@drawable/about_us_vector"
+                android:title="@string/About"
+                android:menuCategory="secondary"/>
         </menu>
 
     </item>
+
+
+
+    <item android:title="Admin Access"
+        android:menuCategory="secondary">
+        <menu>
+            <item
+            android:id="@+id/adminLogin"
+            android:icon="@drawable/admin_image"
+            android:title="Admin"
+            android:menuCategory="secondary"/>
+        </menu>
+
+    </item>
+
+
+
 
 
 </menu>

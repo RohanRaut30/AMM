@@ -17,6 +17,35 @@
         android:paddingRight="20dp"
         android:padding="16dp">
 
+        <TextView
+            android:id="@+id/studentform1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Student Adaptation Program"
+            android:textColor="#535455"
+            android:textSize="28dp"
+            tools:ignore="DuplicateIds" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="-34dp"
+            android:src="@drawable/student_first" />
+
+        <TextView
+            android:id="@+id/studentform2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-29dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Thank you for your interest in our Student Adaptation Program.Our team will carefully review your details and assess your eligibility for the program. If you meet the criteria and are deemed fit for student adaptation, we will be sure to connect with you soon."
+            android:textColor="#7B8691"
+            android:textSize="20dp"
+            tools:ignore="DuplicateIds" />
+
 
     <!-- Full Name -->
     <com.google.android.material.textfield.TextInputLayout
@@ -136,12 +165,27 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mention in detail about Yourself"
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
     <!-- Submit Button -->
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply"
+        android:text="Apply For adaptation"
         android:textColor="@android:color/white"
         android:background="@drawable/border"
         android:layout_gravity="center"

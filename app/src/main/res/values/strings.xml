@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="action_profiles" tools:ignore="MissingTranslation">Profile</string>
+    <string name="action_profiles" tools:ignore="MissingTranslation">Admin Login</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -63,5 +63,7 @@
     <string name="studentadap6" translatable="false">Access to quality educational resources is essential for a well-rounded education. Through the Bal Kamgar Dattak Yojana, we ensure that adopted students have access to a wide range of educational resources, including books, reference materials, and digital learning tools. We aim to bridge the educational gap and provide them with equal opportunities to thrive academically.</string>
     <string name="studentadap7" translatable="false">We strongly believe that the success of these students lies in the collective effort of the community. Hence, we actively engage the community, seeking their support and involvement in shaping the future of these bright minds. By fostering a sense of social responsibility, we encourage individuals and organizations to contribute towards this noble cause and become agents of change.</string>
     <string name="studentadap8" translatable="false">On the auspicious occasion of Dahi Handi Utsav (Gokulashtami), our Mandal is proud to introduce the Bal Kamgar Dattak Yojana. By adopting students and providing them with financial assistance, mentorship, and access to educational resources, we strive to create a transformative impact on their lives. Together, let us embrace the spirit of empowerment and uplift the educational future of deserving students, fostering a society where every child has equal opportunities to succeed.</string>
+    <string name="HomeText3">Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival. Celebrating its 129th year, the mandal is witness to freedom struggle and progressive reforms associated with the city.</string>
+    <string name="HomeText4">Mandai, the vegetable market in the old city that has a rich history spanning over 125 years of history, was dominated by a few families, who initiated public celebrations of Ganesh festival and formed the Akhil Mandai Mandal.</string>
 
 </resources>

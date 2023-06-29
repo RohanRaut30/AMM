@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeAreEcoFriendly">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="40dp"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-170dp"
+            android:src="@drawable/mandaiganpati1"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-170dp"
+            android:fontFamily="@font/candal"
+            android:text="We Are Eco Friendly"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/ecoText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:text="@string/histotext2"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/ecoText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:text="@string/histotext3"
+            android:textSize="20dp" />
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

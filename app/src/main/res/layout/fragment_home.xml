@@ -16,6 +16,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:paddingBottom="50dp"
             android:orientation="vertical"
             android:padding="20dp">
 
@@ -24,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="|| एकी हेच बळ ||"
-                android:textSize="25dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 />
 
@@ -49,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Akhil Mandai Mandal and its Sharada-Ganesh idol is one of the main attractions of Pune’s Ganesh festival. Celebrating its 129th year, the mandal is witness to freedom struggle and progressive reforms associated with the city."
+                android:text="@string/HomeText3"
                 android:textColor="@color/material_dynamic_neutral_variant30"
                 android:textSize="20dp" />
             <TextView
@@ -58,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Mandai, the vegetable market in the old city that has a rich history spanning over 125 years of history, was dominated by a few families, who initiated public celebrations of Ganesh festival and formed the Akhil Mandai Mandal."
+                android:text="@string/HomeText4"
                 android:textColor="@color/material_dynamic_neutral30"
                 android:textSize="20dp" />
 
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginTop="-40dp"
+                android:id="@+id/ecoFriendly"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="11dp"
                 app:contentPadding="20dp">
@@ -208,6 +210,28 @@
 
 
             </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Welcome to Akhil Mandai Mandal, your go-to platform for connecting with our support team and getting answers to your queries. We're here to assist you every step of the way. Whether you have a question, need technical assistance, or simply want to share feedback, we're just a few taps away."
+                android:textColor="@color/material_dynamic_neutral_variant30"
+                android:textSize="20dp"
+                tools:ignore="DuplicateIds" />
+
+            <Button
+                android:id="@+id/btnhome5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Contact Us"
+                />
+
+
 
 
 

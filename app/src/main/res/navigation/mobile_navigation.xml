@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_mainFragment_to_studentAdaptation"
             app:destination="@id/studentAdaptation" />
+        <action
+            android:id="@+id/action_mainFragment_to_EcoFriendly"
+            app:destination="@id/weAreEcoFriendly" />
+
     </fragment>
 
     <fragment
@@ -29,21 +33,6 @@
         android:name="com.example.amm.ui.slideshow.SlideshowFragment"
         android:label="@string/History"
         tools:layout="@layout/fragment_slideshow" />
-    <fragment
-        android:id="@+id/contactUsFragment"
-        android:name="com.example.amm.Fragment.ContactUsFragment"
-        android:label="@string/Contact"
-        tools:layout="@layout/fragment_contact_us" />
-    <fragment
-        android:id="@+id/marathiFragment"
-        android:name="com.example.amm.Fragment.MarathiFragment"
-        android:label="@string/Marathi"
-        tools:layout="@layout/fragment_marathi" />
-    <fragment
-        android:id="@+id/hindiFragment"
-        android:name="com.example.amm.Fragment.HindiFragment"
-        android:label="@string/Hindi"
-        tools:layout="@layout/fragment_hindi" />
 
     <fragment
         android:id="@+id/aboutUsFragment"
@@ -65,9 +54,21 @@
         android:name="com.example.amm.Fragment.StudentForm"
         android:label="@string/form" />
 
-
-
-
+    <fragment
+        android:id="@+id/adminLogin"
+        android:name="com.example.amm.Fragment.AdminLogin"
+        android:label="Admin"
+        tools:layout="@layout/fragment_admin_login" />
+    <fragment
+        android:id="@+id/weAreEcoFriendly"
+        android:name="com.example.amm.WeAreEcoFriendly"
+        android:label="We Are EcoFriendly"
+        tools:layout="@layout/fragment_we_are_eco_friendly" />
+    <fragment
+        android:id="@+id/contactUs"
+        android:name="com.example.amm.Fragment.ContactUs"
+        android:label="@string/Contact"
+        tools:layout="@layout/fragment_contact_us" />
 
 
 </navigation>

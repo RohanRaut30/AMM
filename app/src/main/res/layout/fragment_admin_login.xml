@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AdminLogin"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <!-- Add your desired UI components for the admin login page -->
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:src="@drawable/managment"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:id="@+id/contactText1"
+        android:fontFamily="@font/carter_one"
+        android:layout_marginTop="-5dp"
+        android:textSize="34sp"
+        android:textColor="#232222"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="26dp"
+        tools:ignore="InvalidId" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginTop="16dp" />
+
+
+
+
+
+</LinearLayout>

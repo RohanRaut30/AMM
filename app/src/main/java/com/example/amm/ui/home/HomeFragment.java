@@ -1,5 +1,6 @@
 package com.example.amm.ui.home;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -47,12 +48,15 @@ public class HomeFragment extends Fragment {
     private TextView textView;
     private TextView textView3;
     private TextView textview4;
-    private String textToAnimate = "Akhil Mandai Mandal";
+    private String textToAnimate = "Akhil Mandai \nMandal";
     private int index = 0;
     private NavController navController;
     private CardView cardStudent;
+    private CardView ecoFriendly;
+    private Button btnhome5;
 
 
+    @SuppressLint("MissingInflatedId")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
@@ -76,6 +80,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //for We Are Eco Friendly
+
+        ecoFriendly = root.findViewById(R.id.ecoFriendly);
+        ecoFriendly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Navigate to the Eco Friendly
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_mainFragment_to_EcoFriendly);
+
+            }
+        });
+
+
+
         Button btn = root.findViewById(R.id.btnhome1);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +104,8 @@ public class HomeFragment extends Fragment {
                 NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_mainFragment_to_aboutUsFragment);
             }
         });
+
+
 
 
 
