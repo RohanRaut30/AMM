@@ -58,7 +58,17 @@
         android:id="@+id/adminLogin"
         android:name="com.example.amm.Fragment.AdminLogin"
         android:label="Admin"
-        tools:layout="@layout/fragment_admin_login" />
+        tools:layout="@layout/fragment_admin_login">
+
+        <action
+            android:id="@+id/action_admin_to_adminHome"
+            app:destination="@id/adminHome" />
+    </fragment>
+
+
+
+
+
     <fragment
         android:id="@+id/weAreEcoFriendly"
         android:name="com.example.amm.WeAreEcoFriendly"
@@ -69,6 +79,11 @@
         android:name="com.example.amm.Fragment.ContactUs"
         android:label="@string/Contact"
         tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/adminHome"
+        android:name="com.example.amm.Fragment.AdminHome"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" />
 
 
 </navigation>
