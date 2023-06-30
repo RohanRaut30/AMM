@@ -83,7 +83,22 @@
         android:id="@+id/adminHome"
         android:name="com.example.amm.Fragment.AdminHome"
         android:label="fragment_admin_home"
-        tools:layout="@layout/fragment_admin_home" />
+        tools:layout="@layout/fragment_admin_home" >
+
+        <action
+            android:id="@+id/admin_to_admin_uploadImage"
+            app:destination="@id/uploadImageAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadImageAdmin"
+        android:name="com.example.amm.Fragment.UploadImageAdmin"
+        android:label="fragment_upload_image_admin"
+        tools:layout="@layout/fragment_upload_image_admin" >
+
+        <action
+            android:id="@+id/action_admin_home_to_gallery"
+            app:destination="@id/nav_gallery" />
+    </fragment>
 
 
 </navigation>
