@@ -23,7 +23,6 @@ public class Fragment1894 extends Fragment {
     private FragmentSlideshowBinding binding;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

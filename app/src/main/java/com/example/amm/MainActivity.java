@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if(which==0) {
-                    setLocal("");
+                    setLocal("en");
                     recreate();
                 }
                 if(which==1) {

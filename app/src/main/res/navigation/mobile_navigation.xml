@@ -37,12 +37,14 @@
     <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.example.amm.ui.home.aboutUsFragment"
-        android:label="@string/About" />
+        android:label="@string/About"
+        tools:layout="@layout/fragment_about_us"/>
 
     <fragment
         android:id="@+id/studentAdaptation"
         android:name="com.example.amm.ui.home.StudentAdopFragment"
-        android:label="@string/StudentAdop">
+        android:label="@string/StudentAdop"
+        tools:layout="@layout/fragment_student_adop">
 
         <action
             android:id="@+id/action_mainFragment_to_StudentForm"
@@ -52,7 +54,8 @@
     <fragment
         android:id="@+id/studentAdaptationForm"
         android:name="com.example.amm.Fragment.StudentForm"
-        android:label="@string/form" />
+        android:label="@string/form"
+        tools:layout="@layout/fragment_student_form"/>
 
     <fragment
         android:id="@+id/adminLogin"
@@ -64,9 +67,6 @@
             android:id="@+id/action_admin_to_adminHome"
             app:destination="@id/adminHome" />
     </fragment>
-
-
-
 
 
     <fragment
@@ -99,6 +99,5 @@
             android:id="@+id/action_admin_home_to_gallery"
             app:destination="@id/nav_gallery" />
     </fragment>
-
 
 </navigation>

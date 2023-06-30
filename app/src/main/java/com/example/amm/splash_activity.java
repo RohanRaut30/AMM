@@ -28,13 +28,10 @@ public class splash_activity extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(splash_activity.this, MainActivity.class);
                 startActivity(i);
+
+                finish();
             }
-        }, 3000); // you can increase or decrease the timelimit of your screen
-
-
-
-
-
+        } , 3000); // you can increase or decrease the timelimit of your screen
 
     }
 }

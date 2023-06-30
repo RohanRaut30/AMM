@@ -19,10 +19,6 @@
             android:icon="@drawable/history_vector"
             android:title="@string/history"
             android:menuCategory="secondary"/>
-
-
-
-
     </group>
 
     <item android:title="Community"
@@ -39,10 +35,14 @@
                 android:icon="@drawable/about_us_vector"
                 android:title="@string/About"
                 android:menuCategory="secondary"/>
+            <item
+                android:id="@+id/select_lang"
+                android:icon="@drawable/baseline_language_24"
+                android:title="@string/Select_language"
+                android:menuCategory="secondary"/>
         </menu>
 
     </item>
-
 
 
     <item android:title="Admin Access"
@@ -51,14 +51,10 @@
             <item
             android:id="@+id/adminLogin"
             android:icon="@drawable/admin_image"
-            android:title="Admin"
+            android:title="@string/admin"
             android:menuCategory="secondary"/>
         </menu>
 
     </item>
-
-
-
-
 
 </menu>

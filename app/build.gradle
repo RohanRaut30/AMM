@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.amm'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.amm"
@@ -47,6 +47,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.2.2'
     implementation 'com.google.firebase:firebase-firestore:24.6.1'
     implementation 'com.google.firebase:firebase-storage:20.2.1'
+    implementation "androidx.recyclerview:recyclerview:1.3.0"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
     implementation 'com.google.firebase:firebase-storage-ktx:20.2.1'
     testImplementation 'junit:junit:4.13.2'
     implementation 'androidx.core:core:1.7.0'
