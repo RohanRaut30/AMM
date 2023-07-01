@@ -32,10 +32,7 @@ public class GalleryFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
 
-    private RecyclerView recyclerView;
-    private ArrayList<DataClass> dataList;
-    private MyImageAdapter adapter;
-    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -44,36 +41,6 @@ public class GalleryFragment extends Fragment {
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-
-        recyclerView = root.findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        dataList = new ArrayList<>();
-        adapter = new MyImageAdapter(getActivity(), dataList);
-        recyclerView.setAdapter(adapter);
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dataList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    DataClass dataClass = dataSnapshot.getValue(DataClass.class);
-                    dataList.add(dataClass);
-                }
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-
-
-
-
 
 
 

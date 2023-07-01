@@ -57,7 +57,7 @@
     <fragment
         android:id="@+id/adminLogin"
         android:name="com.example.amm.Fragment.AdminLogin"
-        android:label="Admin"
+        android:label="@string/Admin"
         tools:layout="@layout/fragment_admin_login">
 
         <action
@@ -99,6 +99,16 @@
             android:id="@+id/action_admin_home_to_gallery"
             app:destination="@id/nav_gallery" />
     </fragment>
+    <fragment
+        android:id="@+id/navigationToOrg"
+        android:name="com.example.amm.Fragment.NavigationToOrg"
+        android:label="@string/location"
+        tools:layout="@layout/fragment_navigation_to_org" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.amm.EventFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_event" />
 
 
 </navigation>

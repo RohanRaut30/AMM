@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -14,9 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AMM"
         tools:targetApi="31" >
-        <activity
-            android:name=".histodemo"
-            android:exported="false" />
+
         <activity
             android:name=".histo"
             android:exported="false" />
@@ -45,6 +46,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDQ14DGfL6BMum8OwC9H5-r8PASel5SX4c" />
 
         <meta-data
             android:name="preloaded_fonts"

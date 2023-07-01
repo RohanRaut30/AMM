@@ -25,7 +25,7 @@
 
     </group>
 
-    <item android:title="Community"
+    <item android:title="Community Support"
         android:menuCategory="secondary">
         <menu>
             <item
@@ -39,9 +39,28 @@
                 android:icon="@drawable/about_us_vector"
                 android:title="@string/About"
                 android:menuCategory="secondary"/>
+
+            <item
+                android:id="@+id/navigationToOrg"
+                android:icon="@drawable/location_vector"
+                android:title="@string/location"
+                android:menuCategory="secondary"/>
         </menu>
 
     </item>
+
+    <item android:title="Events"
+        android:menuCategory="secondary">
+        <menu>
+            <item
+                android:id="@+id/eventFragment"
+                android:icon="@drawable/events_vector_image"
+                android:title="Events"
+                android:menuCategory="secondary"/>
+
+        </menu>
+    </item>
+
 
 
 
@@ -51,7 +70,7 @@
             <item
             android:id="@+id/adminLogin"
             android:icon="@drawable/admin_image"
-            android:title="Admin"
+            android:title="@string/Admin"
             android:menuCategory="secondary"/>
         </menu>
 
