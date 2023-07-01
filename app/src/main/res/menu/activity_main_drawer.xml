@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -19,10 +20,6 @@
             android:icon="@drawable/history_vector"
             android:title="@string/history"
             android:menuCategory="secondary"/>
-
-
-
-
     </group>
 
     <item android:title="Community Support"
@@ -40,11 +37,14 @@
                 android:title="@string/About"
                 android:menuCategory="secondary"/>
 
+
             <item
                 android:id="@+id/navigationToOrg"
                 android:icon="@drawable/location_vector"
-                android:title="@string/location"
-                android:menuCategory="secondary"/>
+                android:title="@string/location"/>
+
+
+
         </menu>
 
     </item>
@@ -63,21 +63,18 @@
 
 
 
-
     <item android:title="Admin Access"
         android:menuCategory="secondary">
         <menu>
             <item
-            android:id="@+id/adminLogin"
-            android:icon="@drawable/admin_image"
-            android:title="@string/Admin"
-            android:menuCategory="secondary"/>
+                android:id="@+id/adminLogin"
+                android:icon="@drawable/admin_image"
+
+            android:title="@string/Admin"/>
+
         </menu>
 
     </item>
 
-
-
-
-
 </menu>
+
