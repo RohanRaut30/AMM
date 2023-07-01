@@ -109,6 +109,11 @@
         android:name="com.example.amm.EventFragment"
         android:label="Events"
         tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.amm.locationFragment"
+        android:label="@string/location"
+        tools:layout="@layout/fragment_location" />
 
 
 </navigation>

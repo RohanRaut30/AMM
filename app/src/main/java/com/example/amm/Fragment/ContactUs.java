@@ -97,11 +97,18 @@ public class ContactUs extends Fragment {
                                 if (task.isSuccessful()) {
                                     // Data successfully saved
                                     Log.d("Firebase", "Form data submitted successfully");
-                                    Toast.makeText(getContext(), "Form data submitted successfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Thank you for reaching out! We'll get back to you soon.", Toast.LENGTH_SHORT).show();
+                                    // Clear input fields
+                                    nameEditText.getText().clear();
+                                    emailEditText.getText().clear();
+                                    mobileEditText.getText().clear();
+                                    subjectEditText.getText().clear();
+                                    commentEditText.getText().clear();
+
                                 } else {
                                     // Error occurred while saving data
                                     Log.e("Firebase", "Failed to submit form data", task.getException());
-                                    Toast.makeText(getContext(), "Failed to submit form data", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "Oops! Something went wrong. Please try again.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

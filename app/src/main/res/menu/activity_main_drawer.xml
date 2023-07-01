@@ -20,6 +20,14 @@
             android:icon="@drawable/history_vector"
             android:title="@string/history"
             android:menuCategory="secondary"/>
+
+
+            <item
+                android:id="@+id/locationFragment"
+                android:icon="@drawable/location_vector"
+                android:title="@string/location"
+                android:menuCategory="secondary"/>
+
     </group>
 
     <item android:title="Community Support"
@@ -37,17 +45,13 @@
                 android:title="@string/About"
                 android:menuCategory="secondary"/>
 
-
-            <item
-                android:id="@+id/navigationToOrg"
-                android:icon="@drawable/location_vector"
-                android:title="@string/location"/>
-
-
-
         </menu>
 
+
     </item>
+
+
+
 
     <item android:title="Events"
         android:menuCategory="secondary">
@@ -70,11 +74,17 @@
                 android:id="@+id/adminLogin"
                 android:icon="@drawable/admin_image"
 
-            android:title="@string/Admin"/>
+                android:title="@string/Admin"/>
 
         </menu>
 
     </item>
+
+
+
+
+
+
 
 </menu>
 
