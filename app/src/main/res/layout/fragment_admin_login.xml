@@ -8,7 +8,6 @@
     android:padding="24dp">
 
 
-
     <!-- Add your desired UI components for the admin login page -->
     <ImageView
         android:layout_width="350dp"

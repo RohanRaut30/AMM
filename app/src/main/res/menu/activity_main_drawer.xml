@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -20,7 +19,6 @@
             android:icon="@drawable/history_vector"
             android:title="@string/history"
             android:menuCategory="secondary"/>
-
 
             <item
                 android:id="@+id/locationFragment"
@@ -46,11 +44,7 @@
                 android:menuCategory="secondary"/>
 
         </menu>
-
-
     </item>
-
-
 
 
     <item android:title="Events"
@@ -66,25 +60,16 @@
     </item>
 
 
-
     <item android:title="Admin Access"
         android:menuCategory="secondary">
         <menu>
             <item
                 android:id="@+id/adminLogin"
                 android:icon="@drawable/admin_image"
-
                 android:title="@string/Admin"/>
-
         </menu>
 
     </item>
-
-
-
-
-
-
 
 </menu>
 

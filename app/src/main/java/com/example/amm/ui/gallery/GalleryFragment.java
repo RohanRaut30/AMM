@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -31,8 +32,10 @@ import java.util.ArrayList;
 public class GalleryFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
-
-
+    private GridView gridView;
+    private ArrayList<DataClass> dataList;
+    private MyImageAdapter adapter;
+    private DatabaseReference databaseReference;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,11 +45,25 @@ public class GalleryFragment extends Fragment {
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        gridView = root.findViewById(R.id.gridView);
+        dataList = new ArrayList<>();
+        adapter = new MyImageAdapter(getActivity(), dataList);
+        gridView.setAdapter(adapter);
+        databaseReference = FirebaseDatabase.getInstance().getReference("Images");
 
-
-
-
-
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    DataClass dataClass = dataSnapshot.getValue(DataClass.class);
+                    dataList.add(dataClass);
+                }
+                adapter.notifyDataSetChanged();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
         return root;
     }
 

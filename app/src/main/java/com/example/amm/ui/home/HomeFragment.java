@@ -15,7 +15,6 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -104,12 +103,7 @@ public class HomeFragment extends Fragment {
                 NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_mainFragment_to_aboutUsFragment);
             }
         });
-
-
-
-
-
-        return root;
+   return root;
     }
 
     private void textView() {

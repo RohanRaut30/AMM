@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
-
 }
 
 android {
@@ -56,4 +55,5 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
 }

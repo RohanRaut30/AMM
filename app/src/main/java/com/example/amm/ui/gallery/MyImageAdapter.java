@@ -1,37 +1,61 @@
-//package com.example.amm.ui.gallery;
-//
-//import android.content.Context;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-//import android.widget.ImageView;
-//import android.widget.TextView;
-//
-//import androidx.annotation.NonNull;
-//import androidx.fragment.app.FragmentActivity;
-//import androidx.recyclerview.widget.RecyclerView;
-//
-//import com.bumptech.glide.Glide;
-//import com.example.amm.DataClass;
-//import com.example.amm.R;
-//
-//import java.util.ArrayList;
-//
-//public class MyImageAdapter extends  RecyclerView.Adapter<MyImageAdapter.MyViewHolder> {
-//
-//    @NonNull
-//    @Override
-//    public MyImageAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        return null;
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(@NonNull MyImageAdapter.MyViewHolder holder, int position) {
-//
-//    }
-//
-//    @Override
-//    public int getItemCount() {
-//        return 0;
-//    }
-//}
+package com.example.amm.ui.gallery;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.example.amm.DataClass;
+import com.example.amm.R;
+
+import java.util.ArrayList;
+
+public class MyImageAdapter extends BaseAdapter {
+
+    private ArrayList<DataClass> dataList;
+    private Context context;
+    LayoutInflater layoutInflater;
+
+    public MyImageAdapter(Context context, ArrayList<DataClass> dataList) {
+        this.context = context;
+        this.dataList = dataList;
+    }
+
+    @Override
+    public int getCount() {
+        return dataList.size();
+    }
+
+    @Override
+    public Object getItem(int i) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        if (layoutInflater == null){
+            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+        if (view == null){
+            view = layoutInflater.inflate(R.layout.grid_item, null);
+        }
+
+        ImageView gridImage = view.findViewById(R.id.gridImage);
+        TextView gridCaption = view.findViewById(R.id.gridCaption);
+
+
+        Glide.with(context).load(dataList.get(i).getImageURL()).into(gridImage);
+        gridCaption.setText(dataList.get(i).getCaption());
+
+        return view;
+    }
+}
