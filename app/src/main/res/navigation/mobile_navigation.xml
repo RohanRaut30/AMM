@@ -20,6 +20,15 @@
             android:id="@+id/action_mainFragment_to_EcoFriendly"
             app:destination="@id/weAreEcoFriendly" />
 
+        <action
+        android:id="@+id/action_home_to_trustPage"
+        app:destination="@id/trust" />
+
+        <action
+            android:id="@+id/action_home_to_event"
+            app:destination="@id/eventFragment" />
+
+
     </fragment>
 
     <fragment
@@ -88,6 +97,10 @@
         <action
             android:id="@+id/admin_to_admin_uploadImage"
             app:destination="@id/uploadImageAdmin" />
+
+        <action
+            android:id="@+id/admin_to_admin_EventManagement_center"
+            app:destination="@id/eventDataUploadCenter" />
     </fragment>
     <fragment
         android:id="@+id/uploadImageAdmin"
@@ -114,6 +127,16 @@
         android:name="com.example.amm.locationFragment"
         android:label="@string/location"
         tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/trust"
+        android:name="com.example.amm.Fragment.trust"
+        android:label="Our Trustees"
+        tools:layout="@layout/fragment_trust" />
+    <fragment
+        android:id="@+id/eventDataUploadCenter"
+        android:name="com.example.amm.EventDataUploadCenter"
+        android:label="fragment_event_data_upload_center"
+        tools:layout="@layout/fragment_event_data_upload_center" />
 
 
 </navigation>

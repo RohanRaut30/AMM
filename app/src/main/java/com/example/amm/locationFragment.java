@@ -34,12 +34,14 @@ public class locationFragment extends Fragment {
                 googleMap = map;
 
 
-                LatLng location = new LatLng(18.512067572473597, 73.85595011239505);
-                googleMap.addMarker(new MarkerOptions().position(location).title("Shri Sharada Ganesh Mandir (Mandai Ganpati)"));
+                LatLng location = new LatLng(18.51180,73.85527);
+                googleMap.addMarker(new MarkerOptions().position(location).title(getString(R.string.shri_sharada_ganesh_mandir_mandai_ganpati)));
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location,16f));
             }
         });
+
+
 
 
         return root;

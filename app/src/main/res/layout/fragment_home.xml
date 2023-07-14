@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-90dp"
                 android:fontFamily="@font/candal"
-                android:text="@string/akhil_mandai_mandal_head"
+                android:text="Akhil Mandai Mandal"
                 android:textSize="40dp" />
 
             <TextView
@@ -218,17 +218,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Welcome to Akhil Mandai Mandal, your go-to platform for connecting with our support team and getting answers to your queries. We're here to assist you every step of the way. Whether you have a question, need technical assistance, or simply want to share feedback, we're just a few taps away."
+                android:padding="15dp"
+                android:text="When it comes to event management and future event guidance, the Akhil Mandai Mandal stands out as a trustworthy partner for organizations. With their expertise, comprehensive services, collaborative approach, and unwavering commitment to excellence, they are dedicated to helping your organization achieve its event goals and shape a successful future. By joining forces with the Akhil Mandai Mandal, you can confidently navigate the dynamic landscape of event management, knowing that you have a reliable ally by your side."
                 android:textColor="@color/material_dynamic_neutral_variant30"
                 android:textSize="20dp"
                 tools:ignore="DuplicateIds" />
 
             <Button
-                android:id="@+id/btnhome5"
+                android:id="@+id/btnTrust"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Contact Us"
+                android:layout_marginBottom="70dp"
+                android:text="our trustee"
                 />
 
 

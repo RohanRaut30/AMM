@@ -16,7 +16,7 @@ import com.example.amm.ui.home.HomeFragment;
 
 public class AdminHome extends Fragment {
 
-    private Button adminHomeBtn1,adminShowImg;
+    private Button adminHomeBtn1;
 
 
     @SuppressLint("MissingInflatedId")
@@ -30,15 +30,10 @@ public class AdminHome extends Fragment {
         adminHomeBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // Navigate to the AboutUsFragment
                 NavHostFragment.findNavController(AdminHome.this).navigate(R.id.admin_to_admin_uploadImage);
 
-            }
-        });
-        adminShowImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(AdminHome.this).navigate(R.id.action_admin_home_to_gallery);
             }
         });
 

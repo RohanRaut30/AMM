@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
     private NavController navController;
     private CardView cardStudent;
     private CardView ecoFriendly;
-    private Button btnhome5;
+    private Button btnTrust;
 
 
     @SuppressLint("MissingInflatedId")
@@ -91,6 +91,17 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        btnTrust = root.findViewById(R.id.btnTrust);
+        btnTrust.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the AboutUsFragment
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_home_to_event);
+
+            }
+        });
+
 
 
 
