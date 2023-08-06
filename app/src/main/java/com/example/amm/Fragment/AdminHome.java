@@ -2,21 +2,20 @@ package com.example.amm.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
+
 import com.example.amm.R;
-import com.example.amm.ui.home.HomeFragment;
 
 public class AdminHome extends Fragment {
 
-    private Button adminHomeBtn1;
+    private Button adminHomeBtn1,adminHome3;
+    private Button adminHomebtn2;
 
 
     @SuppressLint("MissingInflatedId")
@@ -31,8 +30,30 @@ public class AdminHome extends Fragment {
             @Override
             public void onClick(View v) {
 
-                // Navigate to the AboutUsFragment
+                // Navigate to the Upload Image
                 NavHostFragment.findNavController(AdminHome.this).navigate(R.id.admin_to_admin_uploadImage);
+
+            }
+        });
+
+        adminHomebtn2 = root.findViewById(R.id.adminHomeBtn2);
+        adminHomebtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Navigate to the Event Management Center
+                NavHostFragment.findNavController(AdminHome.this).navigate(R.id.admin_to_admin_EventManagement_center);
+
+            }
+        });
+
+        adminHome3 = root.findViewById(R.id.adminHomeBtn3);
+        adminHome3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Navigate to the Notification data management
+                NavHostFragment.findNavController(AdminHome.this).navigate(R.id.admin_to_admin_notification_uploade_data);
 
             }
         });

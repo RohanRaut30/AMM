@@ -7,8 +7,15 @@ public class Event {
     private String content;
     private String imageUrl;
 
-    // Default constructor (required for Firebase)
     public Event() {
+        // Required no-argument constructor for Firebase deserialization
+    }
+
+    public Event(String eventId, String title, String date, String content) {
+        this.eventId = eventId;
+        this.title = title;
+        this.date = date;
+        this.content = content;
     }
 
     public Event(String eventId, String title, String date, String content, String imageUrl) {
@@ -19,50 +26,23 @@ public class Event {
         this.imageUrl = imageUrl;
     }
 
-    public Event(String eventId, String title, String date, String content) {
-
-    }
-
-    // Getters and setters
-    // ...
-
     public String getEventId() {
         return eventId;
-    }
-
-    public void setEventId(String eventId) {
-        this.eventId = eventId;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDate() {
         return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     public String getImageUrl() {
         return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 }

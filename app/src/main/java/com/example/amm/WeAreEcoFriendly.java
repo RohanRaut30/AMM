@@ -1,64 +1,90 @@
 package com.example.amm;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link WeAreEcoFriendly#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+
 public class WeAreEcoFriendly extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private ViewPager viewPager;
+    private ImageSliderAdapter imageSliderAdapter;
+    private Timer slideTimer;
+    private Handler handler;
+    private Runnable slideRunnable;
+    private int currentPage = 0;
+    private int NUM_PAGES = 0;
+    private final long SLIDE_DELAY = 3000; // Delay between slides in milliseconds
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int[] imageIds = {
+            R.drawable.mandaiganpati1,
+            R.drawable.eco2,
+            R.drawable.eco1
+    };
 
-    public WeAreEcoFriendly() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment WeAreEcoFriendly.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static WeAreEcoFriendly newInstance(String param1, String param2) {
-        WeAreEcoFriendly fragment = new WeAreEcoFriendly();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_we_are_eco_friendly, container, false);
+
+        viewPager = view.findViewById(R.id.viewPager);
+        imageSliderAdapter = new ImageSliderAdapter(getContext(), imageIds);
+        viewPager.setAdapter(imageSliderAdapter);
+
+        NUM_PAGES = imageIds.length;
+
+        // Set up automatic sliding
+        handler = new Handler();
+        slideRunnable = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                viewPager.setCurrentItem(currentPage++, true);
+            }
+        };
+
+        startSlideTimer();
+
+        return view;
+    }
+
+    private void startSlideTimer() {
+        slideTimer = new Timer();
+        slideTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(slideRunnable);
+            }
+        }, SLIDE_DELAY, SLIDE_DELAY);
+    }
+
+    private void stopSlideTimer() {
+        if (slideTimer != null) {
+            slideTimer.cancel();
+            slideTimer = null;
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_we_are_eco_friendly, container, false);
+    public void onPause() {
+        super.onPause();
+        stopSlideTimer();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        startSlideTimer();
     }
 }

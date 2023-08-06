@@ -49,6 +49,17 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <!-- Add the exported attribute for the CheckoutActivity -->
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true" />
+
+        <!-- Add the exported attribute for the RzpTokenReceiver -->
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true" />
     </application>
+
 
 </manifest>

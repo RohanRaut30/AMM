@@ -91,7 +91,7 @@
     <fragment
         android:id="@+id/adminHome"
         android:name="com.example.amm.Fragment.AdminHome"
-        android:label="fragment_admin_home"
+        android:label="Admin Dashboard"
         tools:layout="@layout/fragment_admin_home" >
 
         <action
@@ -101,6 +101,9 @@
         <action
             android:id="@+id/admin_to_admin_EventManagement_center"
             app:destination="@id/eventDataUploadCenter" />
+        <action
+            android:id="@+id/admin_to_admin_notification_uploade_data"
+            app:destination="@id/notification_one" />
     </fragment>
     <fragment
         android:id="@+id/uploadImageAdmin"
@@ -137,6 +140,21 @@
         android:name="com.example.amm.EventDataUploadCenter"
         android:label="fragment_event_data_upload_center"
         tools:layout="@layout/fragment_event_data_upload_center" />
+    <fragment
+        android:id="@+id/donation"
+        android:name="com.example.amm.Fragment.donation"
+        android:label="Web Portal"
+        tools:layout="@layout/fragment_donation" />
+    <fragment
+        android:id="@+id/notification_one"
+        android:name="com.example.amm.Fragment.notification_one"
+        android:label="fragment_notification_one"
+        tools:layout="@layout/fragment_notification_one" />
+    <fragment
+        android:id="@+id/payment"
+        android:name="com.example.amm.payment"
+        android:label="Donation"
+        tools:layout="@layout/fragment_payment" />
 
 
 </navigation>

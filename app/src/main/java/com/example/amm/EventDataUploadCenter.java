@@ -1,6 +1,5 @@
 package com.example.amm;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -18,13 +17,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
@@ -41,24 +37,13 @@ public class EventDataUploadCenter extends Fragment {
 
     private Uri imageUri;
 
-    public EventDataUploadCenter() {
-        // Required empty public constructor
-    }
-
-    public static EventDataUploadCenter newInstance() {
-        return new EventDataUploadCenter();
-    }
-
-    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_event_data_upload_center, container, false);
 
-        // Initialize Firebase references
         eventsRef = FirebaseDatabase.getInstance().getReference("events");
         imageStorageRef = FirebaseStorage.getInstance().getReference("event_images");
 
-        // Get references to UI elements
         titleEditText = view.findViewById(R.id.titleEditText);
         dateEditText = view.findViewById(R.id.dateEditText);
         contentEditText = view.findViewById(R.id.contentEditText);
@@ -66,27 +51,16 @@ public class EventDataUploadCenter extends Fragment {
         uploadButton = view.findViewById(R.id.uploadButton);
         imageView = view.findViewById(R.id.imageView);
 
-        chooseImageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFileChooser();
-            }
-        });
+        chooseImageButton.setOnClickListener(v -> openFileChooser());
 
-        uploadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                uploadEventData();
-            }
-        });
+        uploadButton.setOnClickListener(v -> uploadEventData());
 
         return view;
     }
 
     private void openFileChooser() {
-        Intent intent = new Intent();
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE_REQUEST);
     }
 
@@ -105,68 +79,54 @@ public class EventDataUploadCenter extends Fragment {
     }
 
     private void uploadEventData() {
-        final String title = titleEditText.getText().toString();
-        final String date = dateEditText.getText().toString();
-        final String content = contentEditText.getText().toString();
+        String title = titleEditText.getText().toString();
+        String date = dateEditText.getText().toString();
+        String content = contentEditText.getText().toString();
 
-        // Generate a unique key for the event
-        final String eventId = eventsRef.push().getKey();
+        String eventId = eventsRef.push().getKey();
+        StorageReference imageRef = imageStorageRef.child(eventId + ".jpg");
 
         if (imageUri != null) {
-            // Create a storage reference for the image file
-            final StorageReference imageRef = imageStorageRef.child(eventId + ".jpg");
-
-            // Upload the image file to Firebase Storage
-            imageRef.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                    if (task.isSuccessful()) {
-                        imageRef.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Uri> task) {
-                                if (task.isSuccessful()) {
-                                    Uri downloadUri = task.getResult();
-
-                                    Event event = new Event(eventId, title, date, content, downloadUri.toString());
-
-                                    // Upload event data to Firebase database
-                                    eventsRef.child(eventId).setValue(event).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if (task.isSuccessful()) {
-                                                Toast.makeText(getActivity(), "Event data uploaded successfully", Toast.LENGTH_SHORT).show();
-                                                clearForm();
-                                            } else {
-                                                Toast.makeText(getActivity(), "Failed to upload event data", Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    });
+            imageRef.putFile(imageUri)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            imageRef.getDownloadUrl().addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()) {
+                                    String imageUrl = task1.getResult().toString();
+                                    Event event = new Event(eventId, title, date, content, imageUrl);
+                                    eventsRef.child(eventId).setValue(event)
+                                            .addOnCompleteListener(task2 -> {
+                                                if (task2.isSuccessful()) {
+                                                    showToast("Event data uploaded successfully");
+                                                    clearForm();
+                                                } else {
+                                                    showToast("Failed to upload event data");
+                                                }
+                                            });
                                 } else {
-                                    Toast.makeText(getActivity(), "Failed to get image download URL", Toast.LENGTH_SHORT).show();
+                                    showToast("Failed to get image download URL");
                                 }
-                            }
-                        });
-                    } else {
-                        Toast.makeText(getActivity(), "Failed to upload image", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+                            });
+                        } else {
+                            showToast("Failed to upload image");
+                        }
+                    });
         } else {
             Event event = new Event(eventId, title, date, content);
-
-            // Upload event data to Firebase database
-            eventsRef.child(eventId).setValue(event).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(getActivity(), "Event data uploaded successfully", Toast.LENGTH_SHORT).show();
-                        clearForm();
-                    } else {
-                        Toast.makeText(getActivity(), "Failed to upload event data", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+            eventsRef.child(eventId).setValue(event)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            showToast("Event data uploaded successfully");
+                            clearForm();
+                        } else {
+                            showToast("Failed to upload event data");
+                        }
+                    });
         }
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
     private void clearForm() {
@@ -177,47 +137,5 @@ public class EventDataUploadCenter extends Fragment {
         imageUri = null;
     }
 
-    // ConcreteEvent subclass
-    static class Event {
-        private String eventId;
-        private String title;
-        private String date;
-        private String content;
-        private String imageUrl;
 
-        public Event(String eventId, String title, String date, String content) {
-            this.eventId = eventId;
-            this.title = title;
-            this.date = date;
-            this.content = content;
-        }
-
-        public Event(String eventId, String title, String date, String content, String imageUrl) {
-            this.eventId = eventId;
-            this.title = title;
-            this.date = date;
-            this.content = content;
-            this.imageUrl = imageUrl;
-        }
-
-        public String getEventId() {
-            return eventId;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public String getImageUrl() {
-            return imageUrl;
-        }
-    }
 }

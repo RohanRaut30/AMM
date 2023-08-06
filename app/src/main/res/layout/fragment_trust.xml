@@ -1,9 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.trust">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="11dp"
+            app:contentPadding="20dp">
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="124dp"
+                    android:layout_height="151dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/vectorfight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/amatica_sc_bold"
+                        android:gravity="center"
+                        android:text="Anna Thorat"
+                        android:textColor="#C2185B"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="10dp"
+                        android:text="President"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="11dp"
+            app:contentPadding="20dp">
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="124dp"
+                    android:layout_height="151dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/vectorfight" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/amatica_sc_bold"
+                        android:gravity="center"
+                        android:text="Anna Thorat"
+                        android:textColor="#C2185B"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="10dp"
+                        android:text="President"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:contentPadding="20dp">
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="350dp">
+
+                    <ImageView
+                        android:layout_width="124dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/jd" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/amatica_sc_bold"
+                        android:gravity="center"
+                        android:text="Omkar Suryawanshi"
+                        android:textColor="#C2185B"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="10dp"
+                        android:text="President"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

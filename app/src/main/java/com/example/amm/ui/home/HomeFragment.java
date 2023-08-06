@@ -1,45 +1,23 @@
 package com.example.amm.ui.home;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.core.widget.NestedScrollView;
-
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
-
-import com.example.amm.Fragment.Fragment1894;
-import com.example.amm.R;
-import com.example.amm.databinding.FragmentHomeBinding;
-import android.animation.ObjectAnimator;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.LinearInterpolator;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
-import org.w3c.dom.Text;
+import com.example.amm.R;
+import com.example.amm.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
@@ -97,7 +75,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Navigate to the AboutUsFragment
-                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_home_to_event);
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_home_to_trustPage);
 
             }
         });
