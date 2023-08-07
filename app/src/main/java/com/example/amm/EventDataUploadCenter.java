@@ -42,7 +42,7 @@ public class EventDataUploadCenter extends Fragment {
         View view = inflater.inflate(R.layout.fragment_event_data_upload_center, container, false);
 
         eventsRef = FirebaseDatabase.getInstance().getReference("events");
-        imageStorageRef = FirebaseStorage.getInstance().getReference("event_images");
+        imageStorageRef = FirebaseStorage.getInstance().getReference("events");
 
         titleEditText = view.findViewById(R.id.titleEditText);
         dateEditText = view.findViewById(R.id.dateEditText);
@@ -52,7 +52,6 @@ public class EventDataUploadCenter extends Fragment {
         imageView = view.findViewById(R.id.imageView);
 
         chooseImageButton.setOnClickListener(v -> openFileChooser());
-
         uploadButton.setOnClickListener(v -> uploadEventData());
 
         return view;

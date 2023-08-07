@@ -21,7 +21,6 @@
             android:title="@string/history"
             android:menuCategory="secondary"/>
 
-
             <item
                 android:id="@+id/locationFragment"
                 android:icon="@drawable/location_vector"
@@ -54,7 +53,11 @@
                 android:icon="@drawable/donate_vector"
                 android:title="Donation"
                 android:menuCategory="secondary"/>
-
+            <item
+                android:id="@+id/shareFragment"
+                android:icon="@drawable/baseline_share_24"
+                android:title="Share"
+                android:menuCategory="secondary"/>
 
         </menu>
 
