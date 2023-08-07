@@ -1,52 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="30dp"
     tools:context=".payment">
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="239dp"
-        android:src="@drawable/dino"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/payment_one"/>
-
-
-    <EditText
-        android:id="@+id/etPaymentAmount"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
-        android:hint="Enter amount in INR" />
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnPay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Donate for society"
-        android:layout_gravity="center"
-        android:layout_marginTop="23sp"
-        android:onClick="onPayClick" />
-    <TextView
-        android:id="@+id/paytext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="392dp"
-        android:textSize="19sp"
-        android:textColor="#000"
-        android:layout_marginTop="15sp"
-        android:layout_gravity="center"
-        android:text="Payment Status"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="239dp"
+            android:src="@drawable/dino"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/payment_one"/>
 
 
 
-</LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etMobileNumber"
+                android:layout_marginTop="20sp"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmail"
+                android:layout_marginTop="15sp"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPaymentAmount"
+                android:layout_marginTop="15sp"
+                android:hint="Enter amount in INR"
+                android:inputType="phone"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donate for society"
+            android:layout_gravity="center"
+            android:layout_marginTop="23sp"
+            android:onClick="onPayClick" />
+
+        <TextView
+            android:id="@+id/paytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:textSize="19sp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:text="Payment Status"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
