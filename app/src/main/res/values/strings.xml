@@ -72,5 +72,7 @@
     <string name="web_portal" translatable="false">WEB PORTAL</string>
     <string name="web_portal_one" translatable="false">Web Portal</string>
     <string name="payment_one">Contribute something for society and make a positive impact. Your actions, no matter how small, can create ripples of change that benefit the lives of others. Embrace kindness, compassion, and generosity, for these simple gestures can make the world a better place. Together, let\'s build a community that thrives on unity and support, where everyone\'s well-being is valued and uplifted. Your contributions matter, and together, we can create a brighter future for all.</string>
+    <string name="share">Share</string>
+    <string name="donationp">Donation</string>
 
 </resources>

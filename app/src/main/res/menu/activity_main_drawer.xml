@@ -51,20 +51,18 @@
             <item
                 android:id="@+id/payment"
                 android:icon="@drawable/donate_vector"
-                android:title="Donation"
+                android:title="@string/donationp"
                 android:menuCategory="secondary"/>
             <item
                 android:id="@+id/shareFragment"
                 android:icon="@drawable/baseline_share_24"
-                android:title="Share"
+                android:title="@string/share"
                 android:menuCategory="secondary"/>
 
         </menu>
 
 
     </item>
-
-
 
 
     <item android:title="Events"
