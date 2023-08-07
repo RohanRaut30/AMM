@@ -155,6 +155,11 @@
         android:name="com.example.amm.payment"
         android:label="Donation"
         tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.example.amm.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
 
 
 </navigation>

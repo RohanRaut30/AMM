@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-90dp"
                 android:fontFamily="@font/candal"
-                android:text="Akhil Mandai Mandal"
+                android:text="@string/akhil_mandai_mandal"
                 android:textSize="40dp" />
 
             <TextView
