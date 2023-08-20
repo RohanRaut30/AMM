@@ -1,0 +1,12 @@
+<!-- styles.xml -->
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme settings here -->
+    </style>
+
+    <!-- Theme for FullScreenImageActivity without ActionBar -->
+    <style name="AppTheme.FullScreen" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme settings here -->
+    </style>
+</resources>

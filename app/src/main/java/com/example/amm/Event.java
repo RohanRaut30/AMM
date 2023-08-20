@@ -26,6 +26,26 @@ public class Event {
         this.imageUrl = imageUrl;
     }
 
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     public String getEventId() {
         return eventId;
     }

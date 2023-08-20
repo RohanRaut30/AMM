@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragment_background"
     tools:context=".WeAreEcoFriendly">
 
     <LinearLayout
@@ -24,16 +25,17 @@
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/candal"
+            android:fontFamily="@font/yatra_one"
+            android:layout_marginTop="30dp"
             android:text="We Are Eco Friendly"
-            android:textSize="40dp" />
+            android:textSize="35dp" />
 
         <TextView
             android:id="@+id/ecoText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:textColor="@color/material_dynamic_neutral30"
             android:text="@string/histotext2"
             android:textSize="20dp" />
@@ -43,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:textColor="@color/material_dynamic_neutral30"
             android:text="@string/histotext3"
             android:textSize="20dp" />

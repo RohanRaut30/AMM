@@ -1,54 +1,25 @@
 package com.example.amm.ui.home;
 
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.os.Handler;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.amm.R;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.amm.R;
 
 
 public class StudentAdopFragment extends Fragment {
 
 
     private TextView textView;
-    private String textToAnimate = "Student \nAdaptation";
+    private String textToAnimate;
     private int index = 0;
     private Button btnfrom;
 
@@ -82,12 +53,15 @@ public class StudentAdopFragment extends Fragment {
 
     private void textView() {
 
-        if (index < textToAnimate.length()) {
-            textView.setText(textToAnimate.substring(0, index + 1));
-            index++;
-            Handler handler = new Handler();
-            handler.postDelayed(this::textView, 150); // Delay between each character typing
-        }
+        String textToAnimate = getString(R.string.student_adaptation); // Get text from resources
+
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(textToAnimate.length() * 150); // Adjust the duration as needed
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            textView.setText(textToAnimate.substring(0, animatedValue));
+        });
+        animator.start();
     }
 
 

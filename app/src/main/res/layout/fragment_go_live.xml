@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".GoLive">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/One"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Live"
+        android:textSize="30dp"
+        android:fontFamily="@font/yatra_one"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter URL"
+        android:layout_below="@+id/One"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/webBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go live"
+        android:fontFamily="@font/gotu"
+        android:layout_below="@+id/two"
+        android:gravity="center_horizontal"/>
+
+</RelativeLayout>

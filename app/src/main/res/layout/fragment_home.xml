@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
+    android:background="#FFF4E8"
     android:id="@+id/fragmentContainer"
     >
 
         <LinearLayout
+            android:id="@+id/linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -18,7 +20,7 @@
             android:gravity="center"
             android:paddingBottom="50dp"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="13dp">
 
             <TextView
                 android:id="@+id/text1"
@@ -40,25 +42,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-90dp"
-                android:fontFamily="@font/candal"
+                android:fontFamily="@font/yatra_one"
                 android:text="@string/akhil_mandai_mandal"
-                android:textSize="40dp" />
+                android:textSize="28sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="-40dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
 
             <TextView
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/gotu"
                 android:text="@string/HomeText3"
                 android:textColor="@color/material_dynamic_neutral_variant30"
                 android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/text4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/gotu"
                 android:text="@string/HomeText4"
                 android:textColor="@color/material_dynamic_neutral30"
                 android:textSize="20dp" />
@@ -68,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Read More" />
+                android:text="@string/read_more" />
 
 
             <androidx.cardview.widget.CardView
@@ -89,7 +116,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amatica_sc_bold"
+                        android:fontFamily="@font/yatra_one"
                         android:gravity="center"
                         android:text="@string/we_are_eco_friendly"
                         android:textColor="#C2185B"
@@ -112,6 +139,7 @@
                         android:padding="2dp"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
+                        android:fontFamily="@font/gotu"
                         android:layout_marginBottom="5dp"
                         android:text="@string/akhil_mandai_mandal_and_its_sharada_ganesh_idol_is_one_of_the_main_attractions_of_pune_s_ganesh_festival_sharda_gajanan_idol_is_made_from_eco_friendly_material"
                         android:textSize="18sp" />
@@ -139,7 +167,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amatica_sc_bold"
+                        android:fontFamily="@font/yatra_one"
                         android:gravity="center"
                         android:text="@string/student_adoption"
                         android:textColor="#C2185B"
@@ -157,6 +185,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_horizontal"
                         android:padding="2dp"
+                        android:fontFamily="@font/gotu"
                         android:paddingLeft="2dp"
                         android:paddingRight="2dp"
                         android:text="@string/every_year_on_the_occasion_of_dahi_handi_utsav_gokulashtami_we_adopt_student_s_for_their_better_educational_future_under_bal_kamgar_dattak_yojana_which_is_run_by_our_mandal"
@@ -185,7 +214,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/amatica_sc_bold"
+                        android:fontFamily="@font/yatra_one"
                         android:gravity="center"
                         android:text="@string/fight_against_covid_19"
                         android:textColor="#C2185B"
@@ -202,6 +231,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center_horizontal"
+                        android:fontFamily="@font/gotu"
                         android:text="@string/in_this_covid_pandemic_situation_our_mandal_organised_various_programs_to_help_the_less_fortunates_get_out_these_tough_times"
                         android:textSize="18sp" />
 
@@ -217,9 +247,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="@font/gotu"
                 android:padding="15dp"
-                android:text="When it comes to event management and future event guidance, the Akhil Mandai Mandal stands out as a trustworthy partner for organizations. With their expertise, comprehensive services, collaborative approach, and unwavering commitment to excellence, they are dedicated to helping your organization achieve its event goals and shape a successful future. By joining forces with the Akhil Mandai Mandal, you can confidently navigate the dynamic landscape of event management, knowing that you have a reliable ally by your side."
+                android:text="@string/Home_five"
                 android:textColor="@color/material_dynamic_neutral_variant30"
                 android:textSize="20dp"
                 tools:ignore="DuplicateIds" />
@@ -229,8 +259,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="70dp"
-                android:text="our trustee"
+                android:fontFamily="@font/gotu"
+                android:text="@string/our_trustee"
                 />
 
 

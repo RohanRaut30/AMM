@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.aboutUsFragment"
+    android:background="@color/fragment_background"
     android:padding="18dp"
     android:paddingBottom="15dp">
 
@@ -19,8 +20,8 @@
         android:id="@+id/animatedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/candal"
-        android:text="About Mandal"
+        android:fontFamily="@font/yatra_one"
+        android:text="@string/about_mandal"
         android:textSize="40dp" />
 
     <View
@@ -34,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:text="@string/aboutustext1"
             android:textColor="@color/material_dynamic_neutral30"
             android:textSize="20dp" />
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:text="@string/aboutsustext2"
             android:textColor="@color/material_dynamic_neutral30"
             android:textSize="20dp" />
@@ -53,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:text="@string/aboutustext3"
             android:textColor="@color/material_dynamic_neutral30"
             android:textSize="20dp" />
@@ -63,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:text="@string/aboutustext4"
             android:textColor="@color/material_dynamic_neutral30"
             android:textSize="20dp" />
@@ -72,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/gotu"
             android:text="@string/aboutustext5"
             android:textColor="@color/material_dynamic_neutral30"
             android:textSize="20dp" />

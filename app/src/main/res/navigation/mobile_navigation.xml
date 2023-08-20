@@ -94,6 +94,17 @@
         android:label="Admin Dashboard"
         tools:layout="@layout/fragment_admin_home" >
 
+
+        <action
+            android:id="@+id/admin_to_admin_upload_data"
+            app:destination="@id/uploadData" />
+        <action
+            android:id="@+id/admin_to_admin_show_data"
+            app:destination="@id/showData" />
+        <action
+            android:id="@+id/admin_to_admin_go_live"
+            app:destination="@id/adminLive" />
+
         <action
             android:id="@+id/admin_to_admin_uploadImage"
             app:destination="@id/uploadImageAdmin" />
@@ -104,6 +115,8 @@
         <action
             android:id="@+id/admin_to_admin_notification_uploade_data"
             app:destination="@id/notification_one" />
+
+
     </fragment>
     <fragment
         android:id="@+id/uploadImageAdmin"
@@ -138,7 +151,7 @@
     <fragment
         android:id="@+id/eventDataUploadCenter"
         android:name="com.example.amm.EventDataUploadCenter"
-        android:label="fragment_event_data_upload_center"
+        android:label="Upload Event Data"
         tools:layout="@layout/fragment_event_data_upload_center" />
     <fragment
         android:id="@+id/donation"
@@ -158,8 +171,31 @@
     <fragment
         android:id="@+id/shareFragment"
         android:name="com.example.amm.ShareFragment"
-        android:label="fragment_share"
+        android:label="Share"
         tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/notification_Update"
+        android:name="com.example.amm.Notification_Update"
+        android:label="fragment_notification__update"
+        tools:layout="@layout/fragment_notification__update" />
+    <fragment
+        android:id="@+id/uploadData"
+        android:name="com.example.amm.UploadData"
+        android:label="fragment_upload_data"
+        tools:layout="@layout/fragment_upload_data" >
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/showData"
+        android:name="com.example.amm.ShowData"
+        android:label="fragment_show_data"
+        tools:layout="@layout/fragment_show_data" />
+    <fragment
+        android:id="@+id/adminLive"
+        android:name="com.example.amm.Fragment.AdminLive"
+        android:label="Go Live"
+        tools:layout="@layout/fragment_admin_live" />
 
 
 </navigation>

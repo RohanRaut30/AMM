@@ -1,6 +1,5 @@
 package com.example.amm;
 
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -8,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,11 +29,16 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private NavController navController;
     private ActivityMainBinding binding;
+
     Button btnC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
 
         loadLocale();
 //        btnC = findViewById(R.id.btnChangeLanguage);
@@ -51,17 +57,18 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Change Language", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 changLanguage();
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.locationFragment,R.id.contactUs,R.id.aboutUsFragment,R.id.payment,R.id.eventFragment,R.id.adminLogin)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.locationFragment,R.id.contactUs,R.id.aboutUsFragment,R.id.donation,R.id.payment,R.id.eventFragment,R.id.adminLogin)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -70,29 +77,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changLanguage() {
-        final String languages[] = {"English","Marathi","Hindi"};
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
-        mBuilder.setTitle("Choose Language");
-        mBuilder.setSingleChoiceItems(languages, -1, new DialogInterface.OnClickListener() {
+        final AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.bottomsheetlayout, null);
+
+        mBuilder.setView(dialogView);
+        final AlertDialog alertDialog = mBuilder.create();
+
+        // Apply enter animation (optional)
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        RadioGroup languageRadioGroup = dialogView.findViewById(R.id.languageRadioGroup);
+        Button confirmButton = dialogView.findViewById(R.id.confirmButton);
+
+        confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if(which==0) {
+            public void onClick(View v) {
+                int selectedRadioButtonId = languageRadioGroup.getCheckedRadioButtonId();
+                if (selectedRadioButtonId == R.id.englishRadioButton) {
                     setLocal("");
-                    recreate();
-                }
-                if(which==1) {
+                } else if (selectedRadioButtonId == R.id.marathiRadioButton) {
                     setLocal("mr");
-                    recreate();
-                }
-                if(which==2) {
+                } else if (selectedRadioButtonId == R.id.hindiRadioButton) {
                     setLocal("hi");
-                    recreate();
                 }
+
+                alertDialog.dismiss();
+                recreate();
             }
         });
-        mBuilder.create();
-        mBuilder.show();
+
+        alertDialog.show();
     }
+
 
     private void setLocal(String language){
         Locale locale = new Locale(language);
@@ -117,20 +133,22 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                // Handle click on the menu item by navigating to the notification_one fragment
-                navController.navigate(R.id.notification_one);
+                // Navigate to the notification_one destination using the NavController
+                Toast.makeText(this, "Notifictoion", Toast.LENGTH_SHORT).show();
                 return true;
             // Add other cases for other menu items if needed
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
     @Override
     public boolean onSupportNavigateUp() {

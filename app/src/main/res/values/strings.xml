@@ -74,5 +74,15 @@
     <string name="payment_one">Contribute something for society and make a positive impact. Your actions, no matter how small, can create ripples of change that benefit the lives of others. Embrace kindness, compassion, and generosity, for these simple gestures can make the world a better place. Together, let\'s build a community that thrives on unity and support, where everyone\'s well-being is valued and uplifted. Your contributions matter, and together, we can create a brighter future for all.</string>
     <string name="share">Share</string>
     <string name="donationp">Donation</string>
+    <string name="Home_five" translatable="false">When it comes to event management and future event guidance, the Akhil Mandai Mandal stands out as a trustworthy partner for organizations. With their expertise, comprehensive services, collaborative approach, and unwavering commitment to excellence, they are dedicated to helping your organization achieve its event goals and shape a successful future. By joining forces with the Akhil Mandai Mandal, you can confidently navigate the dynamic landscape of event management, knowing that you have a reliable ally by your side.</string>
+    <string name="about_mandal">About Mandal</string>
+    <string name="donate_for_society">Donate For Society</string>
+    <string name="our_trustee">our trustee</string>
+    <string name="read_more">Read More</string>
+    <string name="contact" translatable="false">Contact Us</string>
+    <string name="conatctText_first" translatable="false">|| श्री गणेशाय: नमः ||</string>
+    <string name="student_adaptation" translatable="false">Student Adaptation</string>
+    <string name="u_d" translatable="false">Upload Data</string>
+    <string name="r_p" translatable="false">Show Data</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.example.amm.Fragment;
 
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,21 +17,14 @@ import androidx.fragment.app.Fragment;
 
 import com.example.amm.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ContactUs extends Fragment {
 
+    private TextView contactText1,text;
     private EditText contactName;
     private EditText contactEmail;
     private EditText contactMobile;
@@ -52,12 +47,19 @@ public class ContactUs extends Fragment {
         contactMobile = root.findViewById(R.id.contactMobile);
         contactSubject = root.findViewById(R.id.contactSubject);
         contactComment = root.findViewById(R.id.editTextComments);
+        contactText1 = root.findViewById(R.id.contactText1);
+        text = root.findViewById(R.id.text1);
+
+        animatedTextTwo();
+
+        animatexTextone();
 
         // Initialize the database reference
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
         contactBtn = root.findViewById(R.id.contactBtn);
+
 
         contactBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +124,31 @@ public class ContactUs extends Fragment {
 
         
         return root;
+    }
+
+    private void animatedTextTwo() {
+        String textToAnimate = getString(R.string.conatctText_first); // Get text from resources
+
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(textToAnimate.length() * 800); // Adjust the duration as needed
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            text.setText(textToAnimate.substring(0, animatedValue));
+        });
+        animator.start();
+    }
+
+    private void animatexTextone() {
+
+        String textToAnimate = getString(R.string.contact); // Get text from resources
+
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(textToAnimate.length() * 650); // Adjust the duration as needed
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            contactText1.setText(textToAnimate.substring(0, animatedValue));
+        });
+        animator.start();
     }
 
 

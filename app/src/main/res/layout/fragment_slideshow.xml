@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragment_background"
     tools:context=".ui.slideshow.SlideshowFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -15,6 +16,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
+            android:background="#D4D7DA"
             android:layout_height="wrap_content" />
     </com.google.android.material.appbar.AppBarLayout>
 

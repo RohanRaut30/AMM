@@ -1,17 +1,13 @@
 package com.example.amm.ui.home;
 
-import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.amm.R;
 
@@ -21,7 +17,6 @@ public class aboutUsFragment extends Fragment {
     private TextView animatedText;
     private View horizontalLine;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,19 +25,23 @@ public class aboutUsFragment extends Fragment {
 
         animatedText = view.findViewById(R.id.animatedText);
 
-
-        // Set up the animation
-        Animation animation = new TranslateAnimation(-1000, 0, 0, 0);
-        animation.setDuration(1000); // Animation duration in milliseconds
-
-        // Start the animation
-        animatedText.startAnimation(animation);
-
-
+        animatedText.setText(""); // Clear the text initially
+        animateTextView();
 
 
 
         return view;
 
+    }
+    private void animateTextView() {
+        String textToAnimate = getString(R.string.about_mandal); // Get text from resources
+
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(textToAnimate.length() * 150); // Adjust the duration as needed
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            animatedText.setText(textToAnimate.substring(0, animatedValue));
+        });
+        animator.start();
     }
 }

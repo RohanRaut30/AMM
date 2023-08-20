@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
@@ -45,8 +45,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.titleTextView);
-            dateAndTimeTextView = itemView.findViewById(R.id.dateEditText);
-            informationTextView = itemView.findViewById(R.id.contentEditText);
+            dateAndTimeTextView = itemView.findViewById(R.id.dateTextView);
+            informationTextView = itemView.findViewById(R.id.contentTextView);
             imageView = itemView.findViewById(R.id.imageView);
         }
 
@@ -55,11 +55,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             dateAndTimeTextView.setText(event.getDate());
             informationTextView.setText(event.getContent());
 
-            // Load and display the image using Picasso (or your preferred image-loading library)
             if (event.getImageUrl() != null) {
-                Picasso.get().load(event.getImageUrl()).into(imageView);
+                // Load and display the image using Glide
+                Glide.with(itemView.getContext())
+                        .load(event.getImageUrl())
+                        .into(imageView);
             } else {
-                // If there is no image, you can set a placeholder or hide the ImageView
+                // Hide the ImageView if there is no image
                 imageView.setVisibility(View.GONE);
             }
         }

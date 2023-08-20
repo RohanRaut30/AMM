@@ -1,10 +1,12 @@
 package com.example.amm;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
+import java.util.Calendar;
 
 public class EventDataUploadCenter extends Fragment {
 
@@ -36,6 +39,7 @@ public class EventDataUploadCenter extends Fragment {
     private StorageReference imageStorageRef;
 
     private Uri imageUri;
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -51,10 +55,34 @@ public class EventDataUploadCenter extends Fragment {
         uploadButton = view.findViewById(R.id.uploadButton);
         imageView = view.findViewById(R.id.imageView);
 
+        dateEditText.setInputType(InputType.TYPE_NULL);
+        dateEditText.setOnClickListener(v -> showDatePicker());
+
+
+
         chooseImageButton.setOnClickListener(v -> openFileChooser());
-        uploadButton.setOnClickListener(v -> uploadEventData());
+        uploadButton.setOnClickListener(v -> startUpload());
+
+
 
         return view;
+    }
+
+    private void showDatePicker() {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                requireContext(),
+                (view, year1, monthOfYear, dayOfMonth) -> {
+                    String selectedDate = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1;
+                    dateEditText.setText(selectedDate);
+                },
+                year, month, day
+        );
+        datePickerDialog.show();
     }
 
     private void openFileChooser() {
@@ -77,6 +105,18 @@ public class EventDataUploadCenter extends Fragment {
         }
     }
 
+    private void startUpload() {
+
+
+        new Thread(() -> {
+            uploadEventData();
+
+            requireActivity().runOnUiThread(() -> {
+
+            });
+        }).start();
+    }
+
     private void uploadEventData() {
         String title = titleEditText.getText().toString();
         String date = dateEditText.getText().toString();
@@ -86,6 +126,7 @@ public class EventDataUploadCenter extends Fragment {
         StorageReference imageRef = imageStorageRef.child(eventId + ".jpg");
 
         if (imageUri != null) {
+
             imageRef.putFile(imageUri)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
@@ -135,6 +176,5 @@ public class EventDataUploadCenter extends Fragment {
         imageView.setImageDrawable(null);
         imageUri = null;
     }
-
 
 }

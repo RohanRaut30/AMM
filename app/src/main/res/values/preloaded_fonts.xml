@@ -5,10 +5,13 @@
         <item>@font/almendra_sc</item>
         <item>@font/amatic_sc</item>
         <item>@font/amatica_sc_bold</item>
+        <item>@font/amita_bold</item>
         <item>@font/architects_daughter</item>
         <item>@font/archivo_black</item>
         <item>@font/audiowide</item>
         <item>@font/candal</item>
         <item>@font/carter_one</item>
+        <item>@font/gotu</item>
+        <item>@font/yatra_one</item>
     </array>
 </resources>
